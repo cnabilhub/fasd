@@ -1,2 +1,2 @@
-# reelance-admin-dashboard
+# freelance-admin-dashboard
 Just a freelance admin dashboard with laravel 8 and tailwind css
