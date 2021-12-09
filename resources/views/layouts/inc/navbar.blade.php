@@ -25,19 +25,19 @@
                             id="user-dropdown">
                             <span
                                 class="bg-blue-450 uppercase  py-2 px-4 font-normal block w-full whitespace-nowrap  text-gray-400">
-                                {{ Auth::user()->name }}
+                                <i class="far fa-user"></i> {{ Auth::user()->name }}
                             </span>
                             <span
                                 class="bg-blue-450 text-sm py-2 px-4 font-normal block w-full whitespace-nowrap  text-gray-400 ">
-                                {{ Auth::user()->email }}
+                                <i class="far fa-envelope-open"></i> {{ Auth::user()->email }}
                             </span>
                             <a href="#pablo"
-                                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Something
-                                else here</a>
+                                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                                <i class="fas fa-cog"></i> Settings </a>
                             <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
                             <a href="#pablo"
-                                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Seprated
-                                link</a>
+                                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap  text-pink-700 bg-pink-50">
+                                <i class="far fa-arrow-alt-circle-right"></i> Logout </a>
                         </div>
                     </ul>
                 </div>

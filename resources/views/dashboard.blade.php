@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="relative w-auto pl-4 flex-initial">
                                         <div
-                                            class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-orange-500">
+                                            class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-green-600	">
                                             <i class="fas fa-chart-pie"></i>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@
                                     </div>
                                     <div class="relative w-auto pl-4 flex-initial">
                                         <div
-                                            class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-lightBlue-500">
+                                            class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-indigo-500">
                                             <i class="fas fa-percent"></i>
                                         </div>
                                     </div>
@@ -134,10 +134,10 @@
         <div class="flex flex-wrap">
             <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
                 <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700">
-                    <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
+                    <div class="rounded-t mb-0 px-4 py-3 bg-indigo-500">
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full max-w-full flex-grow flex-1">
-                                <h6 class="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
+                                <h6 class="uppercase text-indigo-50-100 mb-1 text-xs font-semibold">
                                     Overview
                                 </h6>
                                 <h2 class="text-white text-xl font-semibold">
@@ -146,7 +146,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="p-4 flex-auto">
+                    <div class="p-4 flex-auto bg-white">
                         <!-- Chart -->
                         <div class="relative h-350-px">
                             <canvas id="line-chart"></canvas>
@@ -156,10 +156,10 @@
             </div>
             <div class="w-full xl:w-4/12 px-4">
                 <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-                    <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
+                    <div class="rounded-t mb-0 px-4 py-3 bg-indigo-500">
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full max-w-full flex-grow flex-1">
-                                <h6 class="uppercase text-blueGray-400 mb-1 text-xs font-semibold">
+                                <h6 class="uppercase text-indigo-50 mb-1 text-xs font-semibold">
                                     Performance
                                 </h6>
                                 <h2 class="text-blueGray-700 text-xl font-semibold">
