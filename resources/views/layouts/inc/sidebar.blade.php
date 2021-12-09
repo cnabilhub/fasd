@@ -55,6 +55,14 @@
                            </a>
                        </li>
 
+                               <li class="items-center">
+                           <a href="{{ route('dashboard') }}"
+                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
+                               <i class="fas fa-building mr-1"></i>
+                               Entreprises
+                           </a>
+                       </li>
+
                        <li class="items-center">
                            <a href="{{ route('services') }}"
                                class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
@@ -63,13 +71,7 @@
                            </a>
                        </li>
 
-                       <li class="items-center">
-                           <a href="{{ route('dashboard') }}"
-                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
-                               <i class="fas fa-building mr-1"></i>
-                               Entreprises
-                           </a>
-                       </li>
+               
 
                        <li class="items-center">
                            <a href="{{ route('dashboard') }}"
