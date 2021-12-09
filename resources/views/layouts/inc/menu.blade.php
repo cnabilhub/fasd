@@ -1,5 +1,5 @@
  <ul class="flex-col md:flex-row list-none items-center  md:flex">
-     <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-dropdown')">
+     <a class="text-blueGray-500 block" href="javascript:void(0)" onclick="openDropdown(event,'user-dropdown')">
          <div class="items-center flex">
              <span
                  class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"><img
@@ -9,11 +9,11 @@
      </a>
      <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
          id="user-dropdown">
-         <span class="bg-blue-450 uppercase  py-2 px-4 font-normal block w-full whitespace-nowrap  text-gray-400">
-             <i class="far fa-user"></i> {{ Auth::user()->name }}
+         <span class="bg-blue-450   text-sm py-2 px-4 font-normal block w-full whitespace-nowrap  text-gray-400">
+             <i class="far fa-user"></i> <span class="ml-2"> {{ Auth::user()->name }} </span>
          </span>
-         <span class="bg-blue-450 text-sm py-2 px-4 font-normal block w-full whitespace-nowrap  text-gray-400 ">
-             <i class="far fa-envelope-open"></i> {{ Auth::user()->email }}
+         <span class="bg-blue-450 text-sm py-2 px-4 font-normal block w-full whitespace-nowrap  text-gray-400">
+             <i class="far fa-envelope-open"></i> <span class="ml-2"> {{ Auth::user()->email }} </span>
          </span>
          <a href="#pablo"
              class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
