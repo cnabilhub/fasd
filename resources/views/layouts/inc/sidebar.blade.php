@@ -108,7 +108,7 @@
 
                        <li class="items-center">
                            <a href="{{ route('logout') }}"
-                               class="text-sm uppercase p-3 font-bold block text-indigo-600 bg-indigo-100 hover:text-indigo-400  ">
+                               class="text-sm uppercase p-3 font-bold block text-pink-600 bg-pink-100 hover:text-pink-400  ">
                                <i class="far fa-arrow-alt-circle-right mr-1"></i>
                                Deconnection
                            </a>
