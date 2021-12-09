@@ -19,6 +19,7 @@
      }
      /* Function for dropdowns */
      function openDropdown(event, dropdownID) {
+         console.log("object dropdown");
          let element = event.target;
          while (element.nodeName !== "A") {
              element = element.parentNode;

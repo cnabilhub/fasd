@@ -21,7 +21,9 @@
     <div id="root">
         @include('layouts.inc.sidebar')
         <div class="relative md:ml-64 bg-blueGray-50">
-            @include('layouts.inc.navbar')
+            <div class=" hidden sm:hidden md:block">
+                @include('layouts.inc.navbar')
+            </div>
             <div class="p-5">
                 @yield('content')
             </div>

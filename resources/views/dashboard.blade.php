@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('page_name')
-    Dashboard page
+    Dashboard
 @endsection
 
 @section('content')
