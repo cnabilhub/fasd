@@ -82,7 +82,7 @@
                                     </div>
                                     <div class="relative w-auto pl-4 flex-initial">
                                         <div
-                                            class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-pink-500">
+                                            class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-indigo-600">
                                             <i class="fas fa-users"></i>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@
                                     </div>
                                     <div class="relative w-auto pl-4 flex-initial">
                                         <div
-                                            class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-indigo-500">
+                                            class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-indigo-600">
                                             <i class="fas fa-percent"></i>
                                         </div>
                                     </div>
@@ -134,7 +134,7 @@
         <div class="flex flex-wrap">
             <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
                 <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700">
-                    <div class="rounded-t mb-0 px-4 py-3 bg-indigo-500">
+                    <div class="rounded-t mb-0 px-4 py-3 bg-indigo-600">
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full max-w-full flex-grow flex-1">
                                 <h6 class="uppercase text-indigo-50-100 mb-1 text-xs font-semibold">
@@ -156,7 +156,7 @@
             </div>
             <div class="w-full xl:w-4/12 px-4">
                 <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-                    <div class="rounded-t mb-0 px-4 py-3 bg-indigo-500">
+                    <div class="rounded-t mb-0 px-4 py-3 bg-indigo-600">
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full max-w-full flex-grow flex-1">
                                 <h6 class="uppercase text-indigo-50 mb-1 text-xs font-semibold">
@@ -189,7 +189,7 @@
                             </div>
                             <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
                                 <button
-                                    class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                    class="bg-indigo-600 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                     type="button">
                                     See all
                                 </button>
@@ -331,7 +331,7 @@
                             </div>
                             <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
                                 <button
-                                    class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                    class="bg-indigo-600 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                     type="button">
                                     See all
                                 </button>
