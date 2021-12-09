@@ -24,7 +24,7 @@
             <div class=" hidden sm:hidden md:block">
                 @include('layouts.inc.navbar')
             </div>
-            <div class="p-5">
+            <div class="p-5 container mx-auto">
                 @yield('content')
             </div>
             @include('layouts.inc.footer')

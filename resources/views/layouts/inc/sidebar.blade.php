@@ -55,8 +55,8 @@
                            </a>
                        </li>
 
-                               <li class="items-center">
-                           <a href="{{ route('dashboard') }}"
+                       <li class="items-center">
+                           <a href="{{ route('companies') }}"
                                class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
                                <i class="fas fa-building mr-1"></i>
                                Entreprises
@@ -71,7 +71,7 @@
                            </a>
                        </li>
 
-               
+
 
                        <li class="items-center">
                            <a href="{{ route('dashboard') }}"

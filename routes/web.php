@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,19 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+// COMPANIES 
+
+Route::middleware(['auth'])->prefix('companies')->group(function () {
+
+    Route::get('/', [CompanyController::class, 'index'])->name('companies');
+
+    Route::get('/company/{id}', function () {
+        // Uses first & second middleware...
+    });
+});
+
+
 
 Route::get('services', function () {
     return view('services.index');

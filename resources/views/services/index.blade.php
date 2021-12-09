@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <div class="container mx-auto">
+    <div class="">
         <div class="flex flex-wrap">
             <div class="w-full lg:w-6/12 xl:w-4/12 px-4 mt-5">
                 <div
