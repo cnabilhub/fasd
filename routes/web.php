@@ -23,6 +23,6 @@ Route::get('/dashboard', function () {
 
 Route::get('services', function () {
     return view('services.index');
-});
+})->name('services');
 
 require __DIR__ . '/auth.php';
