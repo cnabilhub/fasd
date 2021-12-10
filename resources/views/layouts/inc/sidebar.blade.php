@@ -37,13 +37,8 @@
                                class="border-0 px-3 py-2 h-12 border border-solid border-grayGray-500 placeholder-grayGray-300 text-grayGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal" />
                        </div>
                    </form>
-                   <!-- Divider -->
-                   <hr class="my-4 md:min-w-full" />
-                   <!-- Heading -->
-                   <h6 class="md:min-w-full text-grayGray-500 text-sm uppercase font-bold block pt-1 pb-4 no-underline">
-                       Menu
-                   </h6>
-                   <!-- Navigation -->
+
+                   <div class="my-3 border-b border-solid border-blueGray-200 rounded-t"></div>
 
                    <ul class="md:flex-col md:min-w-full flex flex-col list-none">
 
@@ -92,14 +87,11 @@
 
                    </ul>
 
-                   <!-- Divider -->
-                   <hr class="my-4 md:min-w-full" />
+                   <div class="my-3 border-b border-solid border-blueGray-200 rounded-t"></div>
 
-                   <h6 class="md:min-w-full text-grayGray-500 text-sm uppercase font-bold block pt-1 pb-4 no-underline">
-                       Autres
-                   </h6>
+
+
                    <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-
                        <li class="items-center">
                            <a href="{{ route('dashboard') }}"
                                class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
