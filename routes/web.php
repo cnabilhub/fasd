@@ -22,16 +22,21 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-// COMPANIES 
 
-Route::middleware(['auth'])->prefix('companies')->group(function () {
+// COMPANIES
 
-    Route::get('/', [CompanyController::class, 'index'])->name('companies');
+// Route::middleware(['auth'])->prefix('companies')->group(function () {
 
-    Route::get('/company/{id}', function () {
-        // Uses first & second middleware...
-    });
-});
+//     Route::get('/', [CompanyController::class, 'index'])->name('companies');
+
+//     Route::get('/company/{id}', function () {
+//         // Uses first & second middleware...
+//     });
+// });
+
+Route::resource('companies', CompanyController::class)
+    ->middleware(['auth']);
+
 
 
 

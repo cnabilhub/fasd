@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class CompanyController extends Controller
 {
@@ -14,7 +15,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::paginate(9);
+        $companies = Company::paginate(6);
+        // return response()->json(['success' => 'Got Simple Ajax Request.', 'data' => $companies]);
         return view('companies.index')->with(['companies' => $companies]);
     }
 
@@ -32,7 +34,7 @@ class CompanyController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\    
      */
     public function store(Request $request)
     {
@@ -45,9 +47,9 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Company $company)
     {
-        //
+        return view('companies.show', ['company' => $company]);
     }
 
     /**

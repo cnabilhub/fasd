@@ -9,7 +9,7 @@
                </button>
                <div class="md:block text-left md:pb-2  inline-block whitespace-nowrap p-4 sm:p-1     px-0">
 
-                   @include('components.application-logo')
+                   @include('components.logo')
 
                </div>
                <div class="block"> </div>
@@ -19,8 +19,7 @@
                    <div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-grayGray-200">
                        <div class="flex flex-wrap">
                            <div class="w-6/12">
-                               <div class="md:block text-left md:pb-2 text-grayGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
-                                   @include('components.application-logo')></div>
+                               <x-logo />
                            </div>
                            <div class="w-6/12 flex justify-end">
                                <button type="button"
@@ -51,7 +50,7 @@
                        </li>
 
                        <li class="items-center">
-                           <a href="{{ route('companies') }}"
+                           <a href="{{ route('companies.index') }}"
                                class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
                                <i class="fas fa-building mr-1"></i>
                                Entreprises
@@ -81,6 +80,15 @@
                                class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
                                <i class="fas fa-file-invoice mr-1"></i>
                                Factures
+                           </a>
+                       </li>
+
+
+                       <li class="items-center">
+                           <a href="{{ route('dashboard') }}"
+                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
+                               <i class="fas fa-file-invoice mr-1"></i>
+                               Devis
                            </a>
                        </li>
 

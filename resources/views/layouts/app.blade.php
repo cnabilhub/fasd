@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }} - @yield('page_name')</title>
     <link rel="shortcut icon" href="{{ asset('/img/favicon.ico') }}" />
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/img/apple-icon.png') }}" />
 
@@ -34,6 +34,7 @@
 
     <!-- Scripts -->
     @include('layouts.inc.scripts')
+    @yield('js')
 </body>
 
 </html>

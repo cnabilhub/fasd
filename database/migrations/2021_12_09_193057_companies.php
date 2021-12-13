@@ -15,9 +15,10 @@ class Companies extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
+            $table->string('name')->required();
+            $table->string('email')->required();
             $table->string('desc')->nullable();
+            $table->string('address')->nullable();
             $table->string('img')->nullable();
             $table->string('phone')->nullable();
             $table->string('tax_id')->nullable();
@@ -34,8 +35,7 @@ class Companies extends Migration
      */
     public function down()
     {
-        
+
         Schema::drop('companies');
-    
     }
 }

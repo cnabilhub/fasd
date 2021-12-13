@@ -1,43 +1,17 @@
+@include('layouts.inc.scripts')
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <x-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
         </x-slot>
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
-        <!-- Validation Errors -->
 
-        @if ($errors->any())
-
-
-            <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500">
-                <span class="text-xl inline-block mr-5 align-middle">
-                    <i class="fas fa-bell"></i>
-                </span>
-                <span class="inline-block align-middle mr-8">
-                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
-                </span>
-                <button
-                    class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
-                    onclick="closeAlert(event)">
-                    <span>×</span>
-                </button>
-            </div>
-            <script>
-                function closeAlert(event) {
-                    let element = event.target;
-                    while (element.nodeName !== "BUTTON") {
-                        element = element.parentNode;
-                    }
-                    element.parentNode.parentNode.removeChild(element.parentNode);
-                }
-            </script>
-
-        @endif
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
@@ -83,3 +57,6 @@
         </form>
     </x-auth-card>
 </x-guest-layout>
+
+<!-- Validation Errors -->
+<x-alert class="mb-4" :errors="$errors" />
