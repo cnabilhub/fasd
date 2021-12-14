@@ -483,9 +483,10 @@
 @endsection
 
 @section('js')
+
     <script>
+        /* Chart initialisations */
         (function() {
-            /* Chart initialisations */
             /* Line Chart */
             var config = {
                 type: "line",

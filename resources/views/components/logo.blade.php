@@ -1,6 +1,6 @@
 <a href="{{ route('dashboard') }}">
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1311.67 460.57">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1311.67 460.57" class="max-w-xs  mx-auto">
         <title>logo</title>
         <g>
             <g>

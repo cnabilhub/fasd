@@ -1,17 +1,18 @@
 @include('layouts.inc.scripts')
 
 <x-guest-layout>
+
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+
+
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
 
+        <div class="p-4 mx-p">
+            <x-logo />
+        </div>
 
         <form method="POST" action="{{ route('login') }}">
             @csrf

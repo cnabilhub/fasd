@@ -33,7 +33,7 @@
                    <form class="mt-6 mb-4 md:hidden">
                        <div class="mb-3 pt-0">
                            <input type="text" placeholder="Search"
-                               class="border-0 px-3 py-2 h-12 border border-solid border-grayGray-500 placeholder-grayGray-300 text-grayGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal" />
+                               class="border-0 px-3 py-2 h-12  border-solid border-grayGray-500 placeholder-grayGray-300 text-grayGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal" />
                        </div>
                    </form>
 
@@ -58,7 +58,7 @@
                        </li>
 
                        <li class="items-center">
-                           <a href="{{ route('services') }}"
+                           <a href="{{ route('services.index') }}"
                                class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
                                <i class="fas fa-concierge-bell mr-1"></i>
                                Services
@@ -116,10 +116,19 @@
                            </a>
                        </li>
 
-
-
                    </ul>
 
                </div>
            </div>
        </nav>
+
+       <script>
+           /* Sidebar - Side navigation menu on mobile/responsive mode */
+           function toggleNavbar(collapseID) {
+               document.getElementById(collapseID).classList.toggle("hidden");
+               document.getElementById(collapseID).classList.toggle("bg-white");
+               document.getElementById(collapseID).classList.toggle("m-2");
+               document.getElementById(collapseID).classList.toggle("py-3");
+               document.getElementById(collapseID).classList.toggle("px-6");
+           }
+       </script>

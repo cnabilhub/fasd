@@ -42,3 +42,13 @@
                 </div>
             </div>
         </footer>
+        <script>
+            /* Make dynamic date appear */
+            (function() {
+                if (document.getElementById("get-current-year")) {
+                    document.getElementById(
+                        "get-current-year"
+                    ).innerHTML = new Date().getFullYear();
+                }
+            })();
+        </script>
