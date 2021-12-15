@@ -13,9 +13,11 @@ Route::view('/', 'dashboard')
 Route::resource('companies', CompanyController::class)
     ->middleware(['auth']);
 
-// Services 
-Route::resource('services', CompanyController::class)
-    ->middleware(['auth']);
+// Route::resource('companies', CompanyController::class)
+// ->middleware(['auth'])->except([
+//     'create',
+// ]);
+
 
 // AUTH 
 

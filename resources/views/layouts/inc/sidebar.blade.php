@@ -58,14 +58,12 @@
                        </li>
 
                        <li class="items-center">
-                           <a href="{{ route('services.index') }}"
+                           <a href="{{ route('dashboard') }}"
                                class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
                                <i class="fas fa-concierge-bell mr-1"></i>
                                Services
                            </a>
                        </li>
-
-
 
                        <li class="items-center">
                            <a href="{{ route('dashboard') }}"
@@ -96,8 +94,6 @@
                    </ul>
 
                    <div class="my-3 border-b border-solid border-blueGray-200 rounded-t"></div>
-
-
 
                    <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
                        <li class="items-center">

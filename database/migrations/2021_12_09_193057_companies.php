@@ -21,7 +21,12 @@ class Companies extends Migration
             $table->string('address')->nullable();
             $table->string('img')->nullable();
             $table->string('phone')->nullable();
-            $table->string('tax_id')->nullable();
+            $table->string('RCS')->nullable();        // RCS registre du commerce et des sociétés
+
+            $table->string('TVA')->default(0);        // TVA taxe sur la valeur ajoutée
+            $table->string('NTVA')->default(0);     //  Numéro TVA Intracommunautaire	
+            $table->string('country')->number();   // Company country 
+
             $table->string('note')->nullable();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();

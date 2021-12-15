@@ -14,6 +14,7 @@ class CompanyFactory extends Factory
      */
     public function definition()
     {
+
         return [
             //            $table->string('name');
             'name' => $this->faker->name(),
@@ -22,7 +23,10 @@ class CompanyFactory extends Factory
             'address' => $this->faker->address(),
             'img' => $this->faker->image(null, 640, 480),
             'phone' => $this->faker->phoneNumber(),
-            'tax_id' => $this->faker->randomNumber(6, false),
+            'RCS' => $this->faker->randomNumber(6, false),
+            'TVA' => $this->faker->randomNumber(2, false),
+            'NTVA' => $this->faker->randomNumber(6, false),
+            'country' => $this->faker->randomNumber(2, false),
             'note' => $this->faker->text(),
             'user_id' => User::all()->random()->id,
         ];

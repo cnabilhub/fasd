@@ -33,43 +33,70 @@
                             <th>
                                 <i class="fas fa-file-invoice-dollar mr-3"></i>
                             </th>
-                            <td>{{ $c->tax_id }}</td>
+                            <td>{{ $c->RCS }}</td>
                         </tr>
                     </table>
 
                 </div>
 
                 <div class="divide-y divide-indigo-500"></div>
-                <div class="actions p-2 mt-1">
+                <div class=" p-2 mt-1 flex justify-between items-center">
 
 
-                    <a href="{{ route('companies.show', $c->id) }}"
-                        class="p-3 bg-orange-500 text-orange-50 text-sm rounded-md shadow-lg shadow-orange-500/50 focus:outline-none"><i
-                            class="fas fa-eye"></i></a>
+                    <div class=" actions">
+                        <a href="{{ route('companies.show', $c->id) }}"
+                            class="p-2 bg-orange-500 text-orange-50 text-sm rounded-md shadow-lg shadow-orange-500/50 focus:outline-none"><i
+                                class="fas fa-eye"></i></a>
 
-                    <a href="#"
-                        class="p-3 bg-indigo-500 text-indigo-50 text-sm rounded-md shadow-lg shadow-indigo-500/50 focus:outline-none"><i
-                            class="fas fa-edit"></i></a>
+                        <a href="#"
+                            class="p-2 bg-indigo-500 text-indigo-50 text-sm rounded-md shadow-lg shadow-indigo-500/50 focus:outline-none"><i
+                                class="fas fa-edit"></i></a>
 
-                    <form action="" class="inline">
-                        <button type="submit"
-                            class="p-3 bg-pink-500 text-pink-50 text-sm font-semibold rounded-md shadow-lg shadow-pink-500/50 focus:outline-none"><i
-                                class="fas fa-trash-alt"></i></button>
-                    </form>
-
-
-
-
+                        <form action="{{ route('companies.destroy', $c->id) }}" class="inline" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" onclick="deleteItem();"
+                                class="p-2 bg-pink-500 text-pink-50 text-sm font-semibold rounded-md shadow-lg shadow-pink-500/50 focus:outline-none">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <span class="mx-2 text-xs text-gray-300">
+                        <i class="fas fa-clock mr-2"></i> {{ $c->created_at->diffForHumans() }}
+                    </span>
                 </div>
             </div>
 
 
         @endforeach
 
-
-
     </div>
+
+    @if ($companies->count() == 0)
+        <div class="text-center text-xl text-indigo-800 p-6 bg-indigo-100 w-full ">
+            La liste des entreprises est vide
+        </div>
+    @endif
     <div class="row mx-auto p-5 mt-4 bg-indigo-50 text-indigo-800">
         {{ $companies->links() }}
     </div>
+@endsection
+
+@section('js')
+    <script>
+        function deleteItem(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Êtes-vous sûr de vouloir supprimer cette entreprise?',
+                showDenyButton: true,
+                confirmButtonText: 'Supprimer',
+                denyButtonText: `Annuler`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    event.target.parentElement.parentElement.submit()
+                    // Swal.fire('Saved!', '', 'success')
+                }
+            })
+        }
+    </script>
 @endsection

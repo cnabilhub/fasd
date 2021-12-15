@@ -19,9 +19,12 @@
         <script>
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
-                // text: 'Something went wrong!',
-                footer: '<ul class="mt-3 list-disc list-inside text-sm text-white-600">@foreach ($errors->all() as $error)<li>{{ $error }}</li>@endforeach </ul>'
+                // title: 'Oops...',
+                title: `<div class="mt-3  mb-4 list-disc list-inside text-sm text-white-600">
+                    @foreach ($errors->all() as $error)
+                        <div class="text-pink-600 text-sm block mb-1"> {{ $error }}</div>
+                    @endforeach 
+                    </div>`
 
             })
         </script>

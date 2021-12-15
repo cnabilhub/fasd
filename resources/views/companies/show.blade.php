@@ -37,7 +37,7 @@
                     <th>
                         <i class="fas fa-file-invoice-dollar mr-3"></i>
                     </th>
-                    <td> {{ $company->tax_id }}</td>
+                    <td> {{ $company->RCS }}</td>
                 </tr>
             </table>
             <div class="flex">

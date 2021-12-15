@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
+use Dotenv\Exception\ValidationException;
+
 
 class CompanyController extends Controller
 {
@@ -17,9 +17,9 @@ class CompanyController extends Controller
     public function index()
     {
 
-        $companies = Auth()->user()->companies()->paginate(6);
-
-        return view('companies.index')->with(['companies' => $companies]);
+        return view('companies.index')
+            ->with(['companies' => Auth()->user()->companies()
+                ->latest()->paginate(6)]);
     }
 
     /**
@@ -29,7 +29,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('companies.create');
     }
 
     /**
@@ -45,39 +45,37 @@ class CompanyController extends Controller
 
             // request validation 
 
-            $validator = Validator::make(
-                $request->all(),
+            $validated = $request->validate(
                 [
-                    'name' => 'required | max:255',
-                    'email' => 'required | email | max:255',
-                    'desc' => '  max:1000',
-                    'phone' => '  max:20',
-                    'tax_id' => '  max:20',
-                    'note' => '  max:1000',
+                    'name' => ['required', 'max:255'],
+                    'email' => ['required', 'email', 'max:255'],
+                    'desc' => ['present', 'max:1000'],
+                    'phone' => ['present', 'max:20'],
+                    'RCS' => ['present', 'max:20'],
+                    'TVA' => ['present', 'max:20'],
+                    'NTVA' => ['present', 'max:20'],
+                    'country' => ['present', 'max:20'],
+                    'note' => ['present', 'max:1000'],
                 ]
             );
 
-            if ($validator->fails()) {
+            $validated['user_id'] = Auth()->user()->id;
 
-                return response()->json($validator->errors());
-            } else {
-                // validation if request has image
+            // dd($validated);
+
+            // validation if request has image
+
+            // $img = Image::make('foo.jpg')->resize(300, 200);
 
 
-                // $img = Image::make('foo.jpg')->resize(300, 200);
+            Company::create($validated);
 
-                $all = $request->all();
-                $all['user_id'] = Auth()->user()->id;
+            return redirect()->back()->with('message', "La société a été ajoutée avec succès");
+        } catch (ValidationException $e) {
 
-                Company::create($all);
-                // $company->user_id = Auth()->user()->id;
-
-                return redirect()->back()->with('message', "Succuufuly added");
-            }
-        } catch (\Throwable $e) {
-
+            return back()->withErrors(['title' => $e->getMessage()]);
             # code...
-            return dd($request->all());
+            // return dd($e);
         }
     }
 
@@ -98,9 +96,9 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Company $company)
     {
-        //
+        return view('companies.edit')->with(['company' => $company]);
     }
 
     /**
@@ -123,6 +121,12 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $compay = Company::find($id);
+        if ($compay) {
+            Company::destroy($id);
+            return redirect()->route('companies.index')->with(['message' => 'La société (' . $compay->name . ')a été supprimée avec succès']);
+        } else {
+            return redirect()->route('companies.index')->withErrors(['error' => 'Erreur lors de la suppression de cette entreprise, veuillez actualiser la page et réessayer']);
+        }
     }
 }
