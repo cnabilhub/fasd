@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class CompanyController extends Controller
 {
@@ -15,8 +16,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::paginate(6);
-        // return response()->json(['success' => 'Got Simple Ajax Request.', 'data' => $companies]);
+
+        $companies = Auth()->user()->companies()->paginate(6);
+
         return view('companies.index')->with(['companies' => $companies]);
     }
 
@@ -38,7 +40,45 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        try {
+
+            // request validation 
+
+            $validator = Validator::make(
+                $request->all(),
+                [
+                    'name' => 'required | max:255',
+                    'email' => 'required | email | max:255',
+                    'desc' => '  max:1000',
+                    'phone' => '  max:20',
+                    'tax_id' => '  max:20',
+                    'note' => '  max:1000',
+                ]
+            );
+
+            if ($validator->fails()) {
+
+                return response()->json($validator->errors());
+            } else {
+                // validation if request has image
+
+
+                // $img = Image::make('foo.jpg')->resize(300, 200);
+
+                $all = $request->all();
+                $all['user_id'] = Auth()->user()->id;
+
+                Company::create($all);
+                // $company->user_id = Auth()->user()->id;
+
+                return redirect()->back()->with('message', "Succuufuly added");
+            }
+        } catch (\Throwable $e) {
+
+            # code...
+            return dd($request->all());
+        }
     }
 
     /**

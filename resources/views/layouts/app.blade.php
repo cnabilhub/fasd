@@ -35,6 +35,7 @@
     <!-- Scripts -->
     @include('layouts.inc.scripts')
     @yield('js')
+    <x-alert />
 </body>
 
 </html>
