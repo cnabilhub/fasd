@@ -5,10 +5,11 @@
 @section('content')
 
     <a href="{{ route('companies.create') }}"
-        class="bg-indigo-600 text-white active:bg-indigo-900 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-4 ease-linear transition-all duration-150"
-        type="button" x-on:click="modal=!modal">
-        <i class="fas fa-plus-circle mr-2"></i> Ajouter Entreprise / Auto-Entrepreneur
+        class="bg-indigo-600 text-white active:bg-indigo-900  text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-4 ease-linear transition-all duration-150"
+        type="button">
+        <i class="fas fa-plus-circle mr-2"></i> Ajouter Entreprise / AE
     </a>
+
 
     <div class="grid gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 ">
         @foreach ($companies as $c)
