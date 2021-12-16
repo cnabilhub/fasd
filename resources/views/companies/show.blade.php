@@ -12,7 +12,7 @@
 
             <div class="flex flex-wrap justify-start my-2">
                 <div class="w-6/12 sm:w-2/12 pr-2">
-                    <img src="{{ asset('/img/sketch.jpg') }}" alt="..."
+                    <img src="@if ($company->img){{ asset('/storage/avatars') . '/' . $company->img }}@else{{ asset('/img/sketch.jpg') }}@endif" alt="..."
                         class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
                 </div>
                 <div class="w-6/12 sm:w-10/12 ">

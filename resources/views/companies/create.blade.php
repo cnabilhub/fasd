@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('page_name')
-    Ajouter une entreprose / Autoentrepreneur
+    Ajouter Entreprise / Auto-Entrepreneur
 @endsection
 @section('content')
     <div class="p-4">

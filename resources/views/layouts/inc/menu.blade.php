@@ -8,7 +8,7 @@
              <span
                  class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"><img
                      alt="..." class="w-full rounded-full align-middle border-none shadow-lg"
-                     src="{{ asset('/img/team-1-800x800.jpg') }}" />
+                     src="@if (Auth::user()->img) {{ Auth::user()->img }}  @else {{ asset('/avatars/default.jpeg') }} @endif" />
              </span>
              <div class="ml-1 font-semibold text-white"> {{ Str::ucfirst(Auth::user()->name) }}</div>
          </div>

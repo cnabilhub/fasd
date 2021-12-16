@@ -1,4 +1,4 @@
-<form action="{{ route('companies.store') }}" method="POST" class="container mx-auto">
+<form action="{{ route('companies.store') }}" method="POST" class="container mx-auto" enctype="multipart/form-data">
     @csrf
 
     {{-- name  and email _________________________________ --}}
@@ -11,7 +11,7 @@
                 <i class="fas fa-building"></i>
             </div>
             <input type="text" name="name"
-                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->name }}@endif">
         </div>
 
@@ -23,7 +23,7 @@
                 <i class="fas fa-envelope"></i>
             </div>
             <input type="text" name="email"
-                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
                 value="@if (isset($company->email)){{ $company->email }}@endif">
         </div>
     </div>
@@ -37,7 +37,7 @@
             <i class="fas fa-info-circle"></i>
         </div>
         <input type="text" name="desc"
-            class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+            class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
             value="@if (isset($company->name)){{ $company->desc }}@endif">
     </div>
 
@@ -49,7 +49,7 @@
             <i class="fas fa-map-pin"></i>
         </div>
         <input type="text" name="address"
-            class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+            class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
             value="@if (isset($company->name)){{ $company->address }}@endif">
     </div>
 
@@ -58,7 +58,7 @@
     <div class="grid gap-x-8 gap-y-4 md:grid-cols-2  sm:grid-cols-1 mb-3">
         <div>
             <img src="{{ asset('/img/angular.jpg') }}" alt="" srcset=""
-                class=" p-2 rounded-lg bg-white border border-slate-300 max-w-xs ">
+                class=" rounded-lg bg-indigo-50 border border-indigo-300 max-w-xs ">
         </div>
         <div class="mb-2">
             <div class="text-sm text-gray-500 mb-4"> Logo de l entreprise :</div>
@@ -66,7 +66,7 @@
                 <i class="fas fa-images"></i>
             </div>
             <input type="file" name="img"
-                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300">
+                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300">
         </div>
     </div>
 
@@ -80,7 +80,7 @@
                 <i class="fas fa-phone-square"></i>
             </div>
             <input type="number" name="phone"
-                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->phone }}@endif">
         </div>
 
@@ -92,7 +92,7 @@
                 <i class="fas fa-money-check-alt"></i>
             </div>
             <input type="text" name="RCS"
-                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->RCS }}@endif">
         </div>
 
@@ -104,7 +104,7 @@
                 <i class="fas fa-money-check-alt"></i>
             </div>
             <input type="text" name="TVA"
-                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->TVA }}@endif">
         </div>
 
@@ -116,7 +116,7 @@
                 <i class="fas fa-money-check-alt"></i>
             </div>
             <input type="text" name="NTVA"
-                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->NTVA }}@endif">
         </div>
 
@@ -128,7 +128,7 @@
                 <i class="fas fa-money-check-alt"></i>
             </div>
             <input type="text" name="country"
-                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-white border border-slate-300"
+                class="w-full px-5 py-4 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->country }}@endif">
         </div>
 

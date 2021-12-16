@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Company;
 use Illuminate\Http\Request;
 use Dotenv\Exception\ValidationException;
+use Image;
 
 
 class CompanyController extends Controller
@@ -56,26 +57,33 @@ class CompanyController extends Controller
                     'NTVA' => ['present', 'max:20'],
                     'country' => ['present', 'max:20'],
                     'note' => ['present', 'max:1000'],
+                    'img' => ['sometimes', 'mimes:jpeg,jpg,png', 'max:2000'],
+
                 ]
             );
-
             $validated['user_id'] = Auth()->user()->id;
 
-            // dd($validated);
+            // // validation if request has image
+            if ($request->hasFile('img')) {
 
-            // validation if request has image
+                $image = $request->file('img');
+                $newImageName = time() . '.' . $image->getClientOriginalExtension();
 
-            // $img = Image::make('foo.jpg')->resize(300, 200);
+                $destinationPath = storage_path('/app/public/avatars');
+                $imgFile = Image::make($image->getRealPath());
 
+                $imgFile->resize(300, 300, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($destinationPath . '/' . $newImageName);
+
+                $validated['img'] = $newImageName;
+            }
 
             Company::create($validated);
 
             return redirect()->back()->with('message', "La société a été ajoutée avec succès");
         } catch (ValidationException $e) {
-
             return back()->withErrors(['title' => $e->getMessage()]);
-            # code...
-            // return dd($e);
         }
     }
 
