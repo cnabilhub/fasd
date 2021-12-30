@@ -483,6 +483,7 @@
 @endsection
 
 @section('js')
+    <script src="{{ asset('/js/Chart.min.js') }}" charset="utf-8"></script>
 
     <script>
         /* Chart initialisations */

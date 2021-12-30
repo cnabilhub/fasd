@@ -59,10 +59,11 @@
                             href="{{ route('companies.edit', $c->id) }}"><i class="fas fa-edit"></i></a>
 
 
-                        <form action="{{ route('companies.destroy', $c->id) }}" class="inline" method="POST">
+                        <form action="{{ route('companies.destroy', $c->id) }}" class="inline" method="POST"
+                            id="deleteform-{{ $c->id }}">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" onclick="deleteItem();"
+                            <button type="submit" onclick="deleteItem(event,{{ $c->id }})"
                                 class="p-2 px-3 bg-pink-500 text-pink-50 text-sm font-semibold rounded-md shadow-lg shadow-pink-500/50 focus:outline-none"><i
                                     class="fas fa-trash-alt"></i></button>
                         </form>
@@ -86,23 +87,4 @@
     <div class="row mx-auto p-5 mt-4 bg-indigo-50 text-indigo-800">
         {{ $companies->links() }}
     </div>
-@endsection
-
-@section('js')
-    <script>
-        function deleteItem(event) {
-            event.preventDefault();
-            Swal.fire({
-                title: 'Êtes-vous sûr de vouloir supprimer cette entreprise?',
-                showDenyButton: true,
-                confirmButtonText: 'Supprimer',
-                denyButtonText: `Annuler`,
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    event.target.parentElement.parentElement.submit()
-                    // Swal.fire('Saved!', '', 'success')
-                }
-            })
-        }
-    </script>
 @endsection

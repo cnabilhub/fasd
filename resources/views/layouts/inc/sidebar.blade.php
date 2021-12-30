@@ -41,9 +41,9 @@
 
                    <ul class="md:flex-col md:min-w-full flex flex-col list-none">
 
-                       <li class="items-center">
+                       <li class="items-center ">
                            <a href="{{ route('dashboard') }}"
-                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
+                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600 hover:bg-gray-50  rounded-md">
                                <i class="fas fa-tachometer-alt mr-1"></i>
                                ACCUEIL
                            </a>

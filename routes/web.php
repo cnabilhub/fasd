@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 
-// Dashboard 
+// Dashboard
 
 Route::view('/', 'dashboard')
     ->middleware(['auth'])->name('dashboard');
@@ -13,12 +13,7 @@ Route::view('/', 'dashboard')
 Route::resource('companies', CompanyController::class)
     ->middleware(['auth']);
 
-// Route::resource('companies', CompanyController::class)
-// ->middleware(['auth'])->except([
-//     'create',
-// ]);
 
-
-// AUTH 
+// AUTH
 
 require __DIR__ . '/auth.php';

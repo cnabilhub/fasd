@@ -11,7 +11,7 @@
                 <i class="fas fa-building"></i>
             </div>
             <input type="text" name="name"
-                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
+                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->name }}@endif">
         </div>
 
@@ -23,7 +23,7 @@
                 <i class="fas fa-envelope"></i>
             </div>
             <input type="text" name="email"
-                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
+                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300"
                 value="@if (isset($company->email)){{ $company->email }}@endif">
         </div>
     </div>
@@ -37,7 +37,7 @@
             <i class="fas fa-info-circle"></i>
         </div>
         <input type="text" name="desc"
-            class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
+            class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300"
             value="@if (isset($company->name)){{ $company->desc }}@endif">
     </div>
 
@@ -49,7 +49,7 @@
             <i class="fas fa-map-pin"></i>
         </div>
         <input type="text" name="address"
-            class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
+            class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300"
             value="@if (isset($company->name)){{ $company->address }}@endif">
     </div>
 
@@ -81,7 +81,7 @@
                 <i class="fas fa-phone-square"></i>
             </div>
             <input type="number" name="phone"
-                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
+                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300 border-s"
                 value="@if (isset($company->name)){{ $company->phone }}@endif">
         </div>
 
@@ -93,7 +93,7 @@
                 <i class="fas fa-money-check-alt"></i>
             </div>
             <input type="text" name="RCS"
-                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
+                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->RCS }}@endif">
         </div>
 
@@ -105,7 +105,7 @@
                 <i class="fas fa-money-check-alt"></i>
             </div>
             <input type="text" name="TVA"
-                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
+                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->TVA }}@endif">
         </div>
 
@@ -117,7 +117,7 @@
                 <i class="fas fa-money-check-alt"></i>
             </div>
             <input type="text" name="NTVA"
-                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300"
+                class="w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300"
                 value="@if (isset($company->name)){{ $company->NTVA }}@endif">
         </div>
 
@@ -133,7 +133,7 @@
             </div>
 
             <select name="country" id=""
-                class=" appearance-none w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-indigo-50 border border-indigo-300">
+                class=" appearance-none w-full p-2 px-3 pl-10 text-base text-gray-600 rounded-lg bg-white border border-indigo-300">
                 <option value="@if (isset($company->name)){{ $company->country }}@endif" selected> Morocco</option>
                 <option value="2">France</option>
             </select>

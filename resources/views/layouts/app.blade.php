@@ -14,6 +14,7 @@
     {{-- CSS --}}
 
     @include('layouts.inc.styles')
+
 </head>
 
 <body class="text-blueGray-700 antialiased">
@@ -24,7 +25,7 @@
             <div class=" hidden sm:hidden md:block">
                 @include('layouts.inc.navbar')
             </div>
-            <div class="p-5 container mx-auto">
+            <div class="p-5 container mx-auto bg-slate-100">
                 @yield('content')
             </div>
             @include('layouts.inc.footer')
@@ -34,8 +35,8 @@
 
     <!-- Scripts -->
     @include('layouts.inc.scripts')
-    @yield('js')
     <x-alert />
+    @yield('js')
 </body>
 
 </html>
