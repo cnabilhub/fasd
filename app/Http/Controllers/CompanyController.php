@@ -37,20 +37,21 @@ class CompanyController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\    
+     * @return \Illuminate\Http\
      */
     public function store(Request $request)
     {
 
         try {
 
-            // request validation 
+            // request validation
 
             $validated = $request->validate(
                 [
                     'name' => ['required', 'max:255'],
                     'email' => ['required', 'email', 'max:255'],
                     'desc' => ['present', 'max:1000'],
+                    'address' => ['present', 'max:1000'],
                     'phone' => ['present', 'max:20'],
                     'RCS' => ['present', 'max:20'],
                     'TVA' => ['present', 'max:20'],

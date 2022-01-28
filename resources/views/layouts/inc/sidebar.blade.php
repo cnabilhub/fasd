@@ -51,32 +51,32 @@
 
                        <li class="items-center">
                            <a href="{{ route('companies.index') }}"
-                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
-                               <i class="fas fa-building mr-1"></i>
+                           class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600 hover:bg-gray-50  rounded-md">
+                           <i class="fas fa-building mr-1"></i>
                                Entreprises
                            </a>
                        </li>
 
                        <li class="items-center">
                            <a href="{{ route('dashboard') }}"
-                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
-                               <i class="fas fa-concierge-bell mr-1"></i>
+                           class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600 hover:bg-gray-50  rounded-md">
+                           <i class="fas fa-concierge-bell mr-1"></i>
                                Services
                            </a>
                        </li>
 
                        <li class="items-center">
                            <a href="{{ route('dashboard') }}"
-                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
-                               <i class="fas fa-users mr-1"></i>
+                           class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600 hover:bg-gray-50  rounded-md">
+                           <i class="fas fa-users mr-1"></i>
                                Clients
                            </a>
                        </li>
 
                        <li class="items-center">
                            <a href="{{ route('dashboard') }}"
-                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
-                               <i class="fas fa-file-invoice mr-1"></i>
+                           class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600 hover:bg-gray-50  rounded-md">
+                           <i class="fas fa-file-invoice mr-1"></i>
                                Factures
                            </a>
                        </li>
@@ -84,8 +84,8 @@
 
                        <li class="items-center">
                            <a href="{{ route('dashboard') }}"
-                               class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600">
-                               <i class="fas fa-file-invoice mr-1"></i>
+                           class="text-sm uppercase p-3 font-bold block text-gray-500 hover:text-gray-600 hover:bg-gray-50  rounded-md">
+                           <i class="fas fa-file-invoice mr-1"></i>
                                Devis
                            </a>
                        </li>

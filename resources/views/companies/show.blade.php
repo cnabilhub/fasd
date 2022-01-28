@@ -4,8 +4,29 @@
 @endsection
 @section('content')
     <div class="bg-white  rounded-lg  shadow-gray-200 shadow-lg overflow-hidden">
-        <div class="bg-gray-600 text-white p-5 rounded-tl-lg rounded-tr-lg border border-gray-600">
-            {{ $company->name }}
+        <div class="bg-indigo-300 text-white p-5 rounded-tl-lg rounded-tr-lg border">
+
+            <div class="flex items-center justify-between text-indigo-600 font-bold">
+
+                <div>{{ $company->name }}
+                </div>
+
+                <div class="flex">
+                    <a class="p-2 bg-indigo-500 text-indigo-50 text-sm rounded-md shadow-lg shadow-indigo-500/50 focus:outline-none px-2"
+                        href="{{ route('companies.edit', $company->id) }}"><i class="fas fa-edit"></i> Edit </a>
+
+                        <div class="mx-2"></div>
+
+                        <form action="{{ route('companies.destroy', $company->id) }}" class="inline" method="POST"
+                            id="deleteform-{{ $company->id }}">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" onclick="deleteItem(event,{{ $company->id }})"
+                                class="p-2 px-3 bg-pink-500 text-pink-50 text-sm font-semibold rounded-md shadow-lg shadow-pink-500/50 focus:outline-none"><i
+                                class="fas fa-trash-alt"></i> Remove </button>
+                            </form>
+                        </div>
+                </div>
         </div>
 
         <div class="p-5 mx-auto text-gray-500">
@@ -15,63 +36,34 @@
                     <img src="@if ($company->img){{ asset('/storage/avatars') . '/' . $company->img }}@else{{ asset('/img/sketch.jpg') }}@endif" alt="..."
                         class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
                 </div>
-                <div class="w-6/12 sm:w-10/12 ">
+                <div class="w-6/12 sm:w-10/12 p-4">
                     <span> {{ $company->desc }}</span>
+                    <table>
+                        <tr>
+                            <th>
+                                <i class="fas fa-phone-square mr-3"></i>
+                            </th>
+                            <td> {{ $company->phone }}</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i class="fas fa-envelope-open mr-3"></i>
+                            </th>
+                            <td> {{ $company->email }}</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i class="fas fa-file-invoice-dollar mr-3"></i>
+                            </th>
+                            <td> {{ $company->RCS }}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
-            <table>
-                <tr>
-                    <th>
-                        <i class="fas fa-phone-square mr-3"></i>
-                    </th>
-                    <td> {{ $company->phone }}</td>
-                </tr>
-                <tr>
-                    <th>
-                        <i class="fas fa-envelope-open mr-3"></i>
-                    </th>
-                    <td> {{ $company->email }}</td>
-                </tr>
-                <tr>
-                    <th>
-                        <i class="fas fa-file-invoice-dollar mr-3"></i>
-                    </th>
-                    <td> {{ $company->RCS }}</td>
-                </tr>
-            </table>
-            <div class="flex">
-                <span> <img src="" alt=""></span>
-
-            </div>
-
-
 
         </div>
 
-        <div class="divide-y divide-indigo-500"></div>
-        <div class="actions p-3 mt-4">
 
-            <button
-                class="py-2 px-3 bg-indigo-500 text-indigo-50 text-sm rounded-md shadow-lg shadow-indigo-500/50 focus:outline-none">
-                <i class="fas fa-edit"></i>
-            </button>
-
-            <button
-                class="py-2 px-3 bg-pink-500 text-pink-50 text-sm font-semibold rounded-md shadow-lg shadow-pink-500/50 focus:outline-none">
-                <i class="fas fa-trash-alt"></i>
-            </button>
-
-            <button
-                class="py-2 px-3 bg-green-500 text-green-50 text-sm font-semibold rounded-md shadow-lg shadow-green-500/50 focus:outline-none">
-                <i class="fab fa-whatsapp"></i>
-            </button>
-
-            <button
-                class="py-2 px-3 bg-red-500 text-red-50 text-sm font-semibold rounded-md shadow-lg shadow-red-500/50 focus:outline-none">
-                <i class="fas fa-envelope-open"></i>
-            </button>
-
-        </div>
     </div>
 @endsection

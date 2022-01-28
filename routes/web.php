@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\dashboardController;
 
 // Dashboard
 
-Route::view('/', 'dashboard')
+
+Route::get('/', [dashboardController::class,'index'])
     ->middleware(['auth'])->name('dashboard');
 
 // Companies

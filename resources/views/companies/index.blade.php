@@ -41,6 +41,13 @@
                             </th>
                             <td>{{ $c->RCS }}</td>
                         </tr>
+
+                        <tr>
+                            <th>
+                                <i class="fas fa-map-marked-alt"></i>
+                            </th>
+                            <td>{{ $c->address }}</td>
+                        </tr>
                     </table>
 
                 </div>
