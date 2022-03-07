@@ -7,7 +7,7 @@ use App\Http\Controllers\dashboardController;
 // Dashboard
 
 
-Route::get('/', [dashboardController::class,'index'])
+Route::get('/', [dashboardController::class, 'index'])
     ->middleware(['auth'])->name('dashboard');
 
 // Companies
@@ -16,6 +16,6 @@ Route::resource('companies', CompanyController::class)
     ->middleware(['auth']);
 
 
-// AUTH
+// AUTH>
 
 require __DIR__ . '/auth.php';

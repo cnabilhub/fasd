@@ -806,6 +806,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-around {
   justify-content: space-around;
 }
+.justify-items-end {
+  justify-items: end;
+}
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -831,6 +834,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .divide-indigo-500 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(99 102 241 / var(--tw-divide-opacity));
+}
+.justify-self-end {
+  justify-self: end;
 }
 .overflow-hidden {
   overflow: hidden;

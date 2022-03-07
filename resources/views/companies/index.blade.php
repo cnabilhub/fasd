@@ -10,7 +10,6 @@
         <i class="fas fa-plus-circle mr-2"></i> Ajouter Entreprise / AE
     </a>
 
-
     <div class="grid gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 ">
         @foreach ($companies as $c)
 
@@ -94,4 +93,5 @@
     <div class="row mx-auto p-5 mt-4 bg-indigo-50 text-indigo-800">
         {{ $companies->links() }}
     </div>
+
 @endsection
